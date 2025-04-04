@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatsam Society - Consciousness Beyond Form</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <svg id="tatsam-logo" width="50" height="50" viewBox="0 0 100 100">
+                <!-- SVG Logo Path - replace with actual logo -->
+                <path d="M50,20 A30,30 0 1,1 50,80 A30,30 0 1,1 50,20" fill="url(#gradient)" />
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#3a0ca3" />
+                        <stop offset="100%" stop-color="#4361ee" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="logo-text">Tatsam Society</span>
+        </div>
+        <div class="menu">
+            <a href="#home" class="menu-item active">Home</a>
+            <a href="#events" class="menu-item">Events</a>
+            <a href="#wisdom" class="menu-item">Wisdom</a>
+            <a href="#community" class="menu-item">Community</a>
+            <a href="#about" class="menu-item">About</a>
+        </div>
+        <div class="user-menu">
+            <span class="user-greeting">Namaste, Avi</span>
+            <div class="user-icon">
+                <img src="images/user-silhouette.png" alt="User">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-container">
+        <div id="particle-container" class="cosmic-background"></div>
+        <div class="hero-content">
+            <h1 class="main-shloka">चिदानन्दरूपः शिवोऽहम् शिवोऽहम्</h1>
+            <p class="shloka-translation">I am consciousness and bliss; I am Shiva, I am Shiva.</p>
+            <div class="current-moment">
+                <span class="date-display">April 4, 2025</span>
+                <span class="time-display">09:45:43 UTC</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#events" class="primary-button">Explore Events</a>
+                <a href="#wisdom" class="secondary-button">Discover Wisdom</a>
+            </div>
+        </div>
+        <div class="sacred-geometry">
+            <svg id="mandala" width="800" height="800" viewBox="0 0 800 800">
+                <!-- SVG Mandala Path - simplified for example -->
+                <circle cx="400" cy="400" r="200" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                <circle cx="400" cy="400" r="150" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                <polygon points="400,200 450,350 600,400 450,450 400,600 350,450 200,400 350,350" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section-container">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="event-filters">
+            <button class="filter active" data-filter="all">All Events</button>
+            <button class="filter" data-filter="meditation">Meditation</button>
+            <button class="filter" data-filter="discussion">Discussions</button>
+            <button class="filter" data-filter="retreat">Retreats</button>
+            <button class="filter" data-filter="service">Service</button>
+        </div>
+        
+        <div class="event-calendar">
+            <!-- Calendar Header -->
+            <div class="calendar-header">
+                <button class="calendar-nav prev">&lt;</button>
+                <h3 class="current-month">April 2025</h3>
+                <button class="calendar-nav next">&gt;</button>
+            </div>
+            
+            <!-- Calendar Grid -->
+            <div class="calendar-grid">
+                <!-- Calendar days would be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="featured-events">
+            <div class="event-card meditation">
+                <div class="event-date">
+                    <span class="day">10</span>
+                    <span class="month">APR</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Full Moon Meditation Circle</h3>
+                    <p class="event-time">19:00 - 21:00 UTC</p>
+                    <p class="event-location">Virtual & Central Park, New York</p>
+                    <p class="event-description">Connect with the global community in this powerful full moon meditation practice.</p>
+                </div>
+                <a href="#register" class="event-register">Register</a>
+            </div>
+            
+            <div class="event-card discussion">
+                <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">APR</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Philosophy Discussion: Beyond Identity</h3>
+                    <p class="event-time">18:00 - 20:00 UTC</p>
+                    <p class="event-location">Tatsam Center & Virtual</p>
+                    <p class="event-description">Explore the meaning of "न मे जातिभेदः" (no distinctions of caste) in modern context.</p>
+                </div>
+                <a href="#register" class="event-register">Register</a>
+            </div>
+            
+            <div class="event-card retreat">
+                <div class="event-date">
+                    <span class="day">22-25</span>
+                    <span class="month">APR</span>
+                </div>
+                <div class="event-details">
+                    <h3 class="event-title">Spring Renewal Retreat</h3>
+                    <p class="event-time">All Day</p>
+                    <p class="event-location">Himalayan Retreat Center</p>
+                    <p class="event-description">Three days of intensive practice, meditation, and community in the mountains.</p>
+                </div>
+                <a href="#register" class="event-register">Register</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wisdom Section -->
+    <section id="wisdom" class="section-container">
+        <h2 class="section-title">Wisdom Exploration</h2>
+        
+        <div class="shloka-cards">
+            <div class="shloka-card" id="shloka1">
+                <div class="card-front">
+                    <h3 class="shloka-text">न मे मृत्युशंका न मे जातिभेदः</h3>
+                    <button class="explore-btn">Explore</button>
+                </div>
+                <div class="card-back">
+                    <h4 class="shloka-title">Beyond Fear and Distinction</h4>
+                    <p class="shloka-translation">I have no fear of death, no distinctions of caste...</p>
+                    <div class="meaning-layers">
+                        <div class="layer" data-depth="1">
+                            <h5>Surface Meaning</h5>
+                            <p>This verse speaks to the transcendence of worldly fears and social distinctions.</p>
+                        </div>
+                        <div class="layer" data-depth="2">
+                            <h5>Philosophical Interpretation</h5>
+                            <p>When identified with pure consciousness, concepts like death and social hierarchy lose their grip on us.</p>
+                        </div>
+                        <div class="layer" data-depth="3">
+                            <h5>Experiential Reality</h5>
+                            <p>Through meditation, one can directly experience the state beyond fear and social constructs.</p>
+                        </div>
+                    </div>
+                    <button class="audio-btn">Listen</button>
+                    <button class="close-btn">Close</button>
+                </div>
+            </div>
+            
+            <!-- Additional shloka cards similar to above -->
+            <div class="shloka-card" id="shloka2">
+                <!-- Similar structure to shloka1 -->
+            </div>
+            
+            <div class="shloka-card" id="shloka3">
+                <!-- Similar structure to shloka1 -->
+            </div>
+        </div>
+        
+        <div class="wisdom-resources">
+            <h3>Further Exploration</h3>
+            <div class="resource-links">
+                <a href="#texts" class="resource-link">Ancient Texts</a>
+                <a href="#commentaries" class="resource-link">Commentaries</a>
+                <a href="#practices" class="resource-link">Practices</a>
+                <a href="#videos" class="resource-link">Video Teachings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="section-container">
+        <h2 class="section-title">Community Consciousness</h2>
+        
+        <div class="community-visualizer">
+            <div class="global-map">
+                <!-- Interactive map with community presence -->
+                <div id="community-map"></div>
+                <div class="active-now">
+                    <span class="count">243</span>
+                    <span class="label">Community Members Online</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="community-insights">
+            <h3>Shared Wisdom</h3>
+            <div class="wisdom-stream">
+                <div class="wisdom-post">
+                    <p class="wisdom-content">"The state of pure awareness exists before thought, beyond form, yet encompasses all."</p>
+                    <span class="wisdom-attribution">Shared April 3, 2025</span>
+                </div>
+                <div class="wisdom-post">
+                    <p class="wisdom-content">"When I recognize myself as consciousness itself, the boundaries between self and other dissolve."</p>
+                    <span class="wisdom-attribution">Shared April 2, 2025</span>
+                </div>
+                <div class="wisdom-post">
+                    <p class="wisdom-content">"Practice is the bridge between intellectual understanding and direct experience of truth."</p>
+                    <span class="wisdom-attribution">Shared April 1, 2025</span>
+                </div>
+            </div>
+            <div class="contribute-wisdom">
+                <textarea placeholder="Share your insight (anonymously if preferred)..."></textarea>
+                <button class="share-btn">Share Wisdom</button>
+            </div>
+        </div>
+        
+        <div class="photo-gallery">
+            <h3>Community Moments</h3>
+            <div class="gallery-grid">
+                <!-- Gallery would have multiple images from past events -->
+                <div class="gallery-item"><img src="images/gallery/meditation-circle.jpg" alt="Meditation Circle"></div>
+                <div class="gallery-item"><img src="images/gallery/retreat.jpg" alt="Mountain Retreat"></div>
+                <div class="gallery-item"><img src="images/gallery/discussion.jpg" alt="Philosophy Discussion"></div>
+                <!-- More gallery items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Journey Section (for logged in users) -->
+    <section id="personal-journey" class="section-container user-specific">
+        <h2 class="section-title">Your Journey, Avi</h2>
+        
+        <div class="journey-stats">
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Events Attended</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Meditation Hours</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Wisdom Contributions</div>
+            </div>
+        </div>
+        
+        <div class="upcoming-events user-specific">
+            <h3>Your Upcoming Events</h3>
+            <div class="personal-event">
+                <div class="event-date">APR 10</div>
+                <div class="event-name">Full Moon Meditation Circle</div>
+                <a href="#details" class="event-details-link">View Details</a>
+            </div>
+            <!-- More personal events -->
+        </div>
+        
+        <div class="practice-journal">
+            <h3>Your Wisdom Journal</h3>
+            <div class="journal-entries">
+                <textarea placeholder="Reflect on your practice today..."></textarea>
+                <button class="save-entry">Save Entry</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg id="footer-logo" width="40" height="40" viewBox="0 0 100 100">
+                    <!-- SVG Logo Path - same as nav logo -->
+                    <path d="M50,20 A30,30 0 1,1 50,80 A30,30 0 1,1 50,20" fill="url(#gradient)" />
+                </svg>
+                <span class="footer-logo-text">Tatsam Society</span>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Navigation</h4>
+                    <a href="#home">Home</a>
+                    <a href="#events">Events</a>
+                    <a href="#wisdom">Wisdom</a>
+                    <a href="#community">Community</a>
+                </div>
+                <div class="link-group">
+                    <h4>Resources</h4>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy</a>
+                </div>
+                <div class="link-group">
+                    <h4>Connect</h4>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">YouTube</a>
+                    <a href="#" class="social-link">Telegram</a>
+                </div>
+            </div>
+            
+            <div class="newsletter-signup">
+                <h4>Stay Connected</h4>
+                <div class="signup-form">
+                    <input type="email" placeholder="Your email address">
+                    <button class="signup-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Tatsam Society. All rights are transcended.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/wisdom.js"></script>
+</body>
+</html>

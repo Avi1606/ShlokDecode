@@ -1,0 +1,223 @@
+/* Animations CSS */
+
+/* Particle Animation */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main-shloka {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Glow Pulse Animation */
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 5px rgba(247, 184, 1, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(247, 184, 1, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(247, 184, 1, 0.3);
+    }
+}
+
+.main-shloka {
+    animation: float 6s ease-in-out infinite, glowPulse 4s ease-in-out infinite;
+}
+
+/* Breathing Animation */
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
+
+.sacred-geometry {
+    animation: breathing 10s ease-in-out infinite, rotate 120s linear infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-container {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-play-state: paused;
+}
+
+.section-container.revealed {
+    animation-play-state: running;
+}
+
+/* Button Pulse Animation */
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.event-register, .primary-button {
+    animation: buttonPulse 2s ease-in-out infinite;
+    animation-play-state: paused;
+}
+
+.event-register:hover, .primary-button:hover {
+    animation-play-state: running;
+}
+
+/* Card Flip Animation */
+.shloka-card {
+    transition: transform 0.5s;
+}
+
+.shloka-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Gradient Shift Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.nav-container, .footer-container {
+    background: linear-gradient(45deg, rgba(15, 3, 38, 0.9), rgba(42, 0, 120, 0.9), rgba(15, 3, 38, 0.9));
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Time Updates Animation */
+@keyframes timeUpdate {
+    0% {
+        opacity: 0.5;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.time-display {
+    animation: timeUpdate 60s steps(1) infinite;
+}
+
+/* Appear on Scroll Animation */
+.wisdom-post, .event-card, .gallery-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.wisdom-post.revealed, .event-card.revealed, .gallery-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Logo Animation */
+@keyframes logoBreathing {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#tatsam-logo {
+    animation: logoBreathing 5s ease-in-out infinite;
+}
+
+/* User Icons Subtle Glow */
+@keyframes iconGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(247, 184, 1, 0);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(247, 184, 1, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(247, 184, 1, 0);
+    }
+}
+
+.user-icon {
+    animation: iconGlow 4s ease-in-out infinite;
+}
+
+/* Typing Cursor Animation */
+.contribute-wisdom textarea, .journal-entries textarea {
+    position: relative;
+}
+
+.contribute-wisdom textarea:focus::after, .journal-entries textarea:focus::after {
+    content: '|';
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
